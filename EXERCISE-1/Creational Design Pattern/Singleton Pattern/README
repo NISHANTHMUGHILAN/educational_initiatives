@@ -1,0 +1,10 @@
+How the Creational Pattern is Implemented
+1. Single Instance:
+  The Logger class ensures that only one instance of the class is created. The private static variable instance holds this single instance. The getInstance method creates the instance if it does not already exist and returns it.
+2. Private Constructor:
+  The private constructor prevents other classes from instantiating the Logger class directly, ensuring that the only way to get an instance is through the getInstance method.
+3. Global Access Point:
+  The getInstance method provides a global point of access to the single instance of the Logger class. Any class can call Logger.getInstance() to get the instance and perform logging operations.
+4. Thread Safety:
+  The getInstance method is synchronized to ensure thread safety. This prevents multiple threads from creating multiple instances of the Logger class simultaneously.
+  The Singleton pattern is implemented in this code to ensure that there is only one instance of the Logger class, which provides a global point of access to the logging functionality. 
