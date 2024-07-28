@@ -1,0 +1,10 @@
+How the Structural Pattern is Implemented
+1.Adapter Pattern:
+  The MediaAdapter class adapts the interface of AdvancedMediaPlayer to the MediaPlayer interface, allowing the AudioPlayer to play both MP3 and MP4 files.
+2.Object Composition:
+  The AudioPlayer class uses composition to include a reference to the MediaAdapter. When an unsupported media type is encountered (like MP4), it creates an instance of MediaAdapter and delegates the request to it.
+3.Separation of Concerns:
+  The MP4Player and MP3Player classes focus on playing specific media formats, while the MediaAdapter handles the compatibility between MediaPlayer and AdvancedMediaPlayer.
+4.Flexibility:
+  The design allows adding support for new media types without changing the existing AudioPlayer class. New AdvancedMediaPlayer implementations can be created and used through the MediaAdapter.
+  The Adapter pattern is implemented in this code to allow the AudioPlayer class to support different media formats. By using an adapter (MediaAdapter), the AudioPlayer can work with different AdvancedMediaPlayer implementations without needing to know the details of each format. 
