@@ -1,0 +1,11 @@
+How the Structural Pattern is Implemented
+1.Decorator Pattern:
+  The ProductDecorator class serves as the base class for concrete decorators, enabling the dynamic addition of responsibilities to the objects.
+2.Composition:
+  The ProductDecorator class holds a reference to a Product object. This allows decorators to be composed over existing objects, adding new behaviors.
+3.Flexibility:
+  The GiftWrappedProduct class extends the functionality of the BasicProduct by adding gift-wrapping features. This demonstrates the flexibility of the Decorator pattern in enhancing the behavior of objects.
+4.Non-Intrusive:
+  The BasicProduct class is unaware of the GiftWrappedProduct decorator, allowing the decoration to be added without modifying the original BasicProduct class.
+
+  The Decorator pattern is implemented in this code to provide a flexible alternative to subclassing for extending functionality
