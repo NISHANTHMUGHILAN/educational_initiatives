@@ -1,0 +1,6 @@
+1.Product Interface (Shape):
+  This is an interface or abstract class that defines the common interface for all concrete products that the factory method creates. In this case, Shape is the product interface.
+2.Concrete Products (Circle and Square):
+  These are concrete classes that implement the product interface. These classes are the actual objects that the factory method will create.
+
+  This code can create different types of objects (in this case, different shapes) without knowing the specifics of how those objects are created. This encapsulates the object creation process and promotes the principle of programming to an interface, rather than an implementation.
