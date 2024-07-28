@@ -1,0 +1,90 @@
+Usage Instructions
+1.Create or Join a Chat Room:
+  Enter the chat room ID to create or join a chat room.
+2.Add Users:
+  Enter the usernames to join the chat room (type 'done' to stop adding users).
+3.Send Messages:
+  Enter the sender username and the message content to send messages within the chat room.
+4.Display Chat Messages:
+  View the list of all messages sent in the chat room.
+5.Display Active Users:
+  View the list of all active users in the chat room.
+6.Exit:
+  Exit the application.
+
+Example Commands:-
+  Creating/Joining a Chat Room: Enter Chat Room ID: Room123
+  Adding Users: Enter username to join the chat room: Alice
+  Sending Messages: Enter sender username: Alice, Enter message: Hello, everyone!
+  Display Chat Messages: Chat Messages: [Alice]: Hello, everyone!
+  Display Active Users: Active Users: [Alice]
+
+Project Structure
+  src/
+  |-- Main.java
+  |-- ChatRoom.java
+  |-- ChatRoomManager.java
+  |-- User.java
+  |-- Message.java
+  |-- Observer.java
+  |-- ConsoleObserver.java
+  |-- CommunicationProtocol.java
+  |-- WebSocketCommunicationProtocol.java
+  |-- HTTPCommunicationProtocol.java
+
+Design Patterns Implemented
+  1.Observer Pattern: Used to notify observers of new messages or user activities in the chat room.
+  2.Singleton Pattern: Ensures that only one instance of ChatRoomManager exists.
+  3.Adapter Pattern: Allows the system to work with different types of client communication protocols (WebSocket, HTTP).
+
+1.ChatRoom Class
+Description
+  The ChatRoom class represents a chat room where users can join, leave, and send messages. It maintains a list of users, messages, and observers to notify about new messages or user activities.
+
+Key Methods
+  addUser(User user): Adds a user to the chat room and notifies observers.
+  removeUser(User user): Removes a user from the chat room and notifies observers.
+  sendMessage(Message message): Adds a message to the chat room and notifies observers.
+  addObserver(Observer observer): Adds an observer to the chat room.
+  removeObserver(Observer observer): Removes an observer from the chat room.
+  displayChatMessages(): Displays all messages in the chat room.
+  displayActiveUsers(): Displays all active users in the chat room.
+  getUser(String username): Returns the user object if the username exists in the chat room.
+
+2.ConsoleObserver Class
+Description
+  The ConsoleObserver class implements the Observer interface and provides methods to handle notifications for new messages and user activities. It prints the updates to the console.
+Key Methods
+  onNewMessage(Message message, ChatRoom chatRoom): Handles the event of a new message being sent in the chat room.
+  onUserActivity(User user, ChatRoom chatRoom): Handles the event of user activity in the chat room.
+
+4.Observer Interface
+Description
+  The Observer interface defines the methods that observers must implement to receive notifications about new messages and user activities in a chat room.
+Key Methods
+  onNewMessage(Message message, ChatRoom chatRoom): Called when a new message is sent in the chat room.
+  onUserActivity(User user, ChatRoom chatRoom): Called when there is user activity in the chat room.
+
+5.CommunicationProtocol Interface
+Description
+  The CommunicationProtocol interface defines the methods that different communication protocols must implement to connect, disconnect, and send messages.
+Key Methods
+  connect(): Connects to the communication server.
+  disconnect(): Disconnects from the communication server.
+  sendMessage(Message message): Sends a message using the communication protocol.
+
+6.User Class
+Description
+  The User class represents a user in the chat room. It contains the username of the user and provides methods to get and set the username.
+Key Methods
+  getUsername(): Returns the username of the user.
+  setUsername(String username): Sets the username of the user.
+
+7.Message Class
+Description
+  The Message class represents a message sent by a user in the chat room. It contains the sender of the message and the content of the message.
+Key Methods
+  getSender(): Returns the sender of the message.
+  setSender(User sender): Sets the sender of the message.
+  getContent(): Returns the content of the message.
+  setContent(String content): Sets the content of the message.
