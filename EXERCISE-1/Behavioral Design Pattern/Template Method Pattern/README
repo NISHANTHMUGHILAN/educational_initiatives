@@ -1,0 +1,9 @@
+1.Abstract Class (OrderProcessor):
+  The OrderProcessor abstract class defines the processOrder method, which is the template method. This method outlines the steps required to process an order.
+  The abstract methods selectItem, addItemToCart, payment, delivery, and confirmation are the steps that subclasses must implement.
+2.Concrete Classes (OnlineOrderProcessor and InStoreOrderProcessor):
+  These classes extend the OrderProcessor abstract class and provide specific implementations for each step defined in the template method.
+  OnlineOrderProcessor handles online orders, implementing the steps for selecting an item, adding it to the online cart, making an online payment, delivering to a home address, and sending an order confirmation email.
+  InStoreOrderProcessor handles in-store orders, implementing the steps for selecting an item from the store shelf, adding it to a physical shopping cart, making a payment at the store checkout, carrying the item out of the store, and printing an order confirmation receipt.
+3.Main Class (TemplateMethodPatternDemo):
+  The TemplateMethodPatternDemo class demonstrates the use of the OrderProcessor class. It creates instances of OnlineOrderProcessor and InStoreOrderProcessor, and calls the processOrder method on each to show how the template method pattern works.
