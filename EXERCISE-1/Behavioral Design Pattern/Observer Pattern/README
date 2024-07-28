@@ -1,0 +1,12 @@
+The Observer pattern is implemented in this code by defining a relationship between the WeatherStation (subject) and WeatherDisplay (observer) classes, where the WeatherStation notifies the WeatherDisplay of any changes in weather measurements.
+Here is how each component works:
+Components of the Observer Pattern in the Code
+1.Subject Interface (WeatherSubject):
+  This interface defines methods for adding, removing, and notifying observers.
+2.Observer Interface (WeatherObserver):
+  This interface defines the update method that will be called to notify the observer of changes.
+3.Concrete Subject (WeatherStation):
+  This class implements the WeatherSubject interface and maintains a list of observers.
+  It also contains methods to set weather measurements, which trigger the notification of observers.
+4.Concrete Observer (WeatherDisplay):
+  This class implements the WeatherObserver interface and defines the update method to display the weather updates.
